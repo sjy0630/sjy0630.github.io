@@ -1,36 +1,77 @@
-This is a [Next.js](https://nextjs.org) project bootstrapped with [`create-next-app`](https://github.com/vercel/next.js/tree/canary/packages/create-next-app).
+# 我的个人网站
 
-## Getting Started
+一个炫酷暗色风的个人主页：平滑滚动 + 电路霓虹背景 + glitch 标题 + 终端彩蛋。
+技术栈：**Next.js 16 · React 19 · Tailwind v4 · motion · lenis**。
 
-First, run the development server:
+---
+
+## 1. 本地预览（每次想看效果时）
 
 ```bash
+cd ~/Projects/my-site
 npm run dev
-# or
-yarn dev
-# or
-pnpm dev
-# or
-bun dev
 ```
 
-Open [http://localhost:3000](http://localhost:3000) with your browser to see the result.
+浏览器打开 http://localhost:3000 。改文件保存后网页会自动刷新。
+（停止：终端里按 `Ctrl + C`）
 
-You can start editing the page by modifying `app/page.js`. The page auto-updates as you edit the file.
+---
 
-This project uses [`next/font`](https://nextjs.org/docs/app/building-your-application/optimizing/fonts) to automatically optimize and load [Geist](https://vercel.com/font), a new font family for Vercel.
+## 2. 怎么改内容（最常用，不用懂代码）
 
-## Learn More
+**① 改文字 / 项目 / 联系方式 →** 编辑 `content/site.js`
+里面有中文注释，照着改引号里的内容就行。名字、简介、项目卡片、GitHub 链接都在这。
 
-To learn more about Next.js, take a look at the following resources:
+**② 发文章 / 传成果 →** 在 `content/posts/` 里新建一个 `.md` 文件
+开头照着 `hello-world.md` 写标题和日期，下面用 Markdown 写正文，自动出现在首页 Writing 区。
 
-- [Next.js Documentation](https://nextjs.org/docs) - learn about Next.js features and API.
-- [Learn Next.js](https://nextjs.org/learn) - an interactive Next.js tutorial.
+**③ 换配色 →** 编辑 `app/globals.css` 顶部 `:root` 里的几个颜色变量
+（`--accent` 是主强调色，改一个值整站跟着变）。
 
-You can check out [the Next.js GitHub repository](https://github.com/vercel/next.js) - your feedback and contributions are welcome!
+---
 
-## Deploy on Vercel
+## 3. 部署上线（已经配好 GitHub Pages）
 
-The easiest way to deploy your Next.js app is to use the [Vercel Platform](https://vercel.com/new?utm_medium=default-template&filter=next.js&utm_source=create-next-app&utm_campaign=create-next-app-readme) from the creators of Next.js.
+网站已经部署在 **https://sjy0630.github.io** 。
 
-Check out our [Next.js deployment documentation](https://nextjs.org/docs/app/building-your-application/deploying) for more details.
+改完内容后，重新部署**只要一条命令**：
+
+```bash
+cd ~/Projects/my-site
+bash deploy.sh
+```
+
+它会自动构建并推到 `gh-pages` 分支，约 1 分钟后线上更新。
+
+> 源码在 `main` 分支、构建产物在 `gh-pages` 分支（Pages 从这里发布）。
+> 想把源码改动也备份到 GitHub：`git add -A && git commit -m "..." && git push origin main`。
+
+---
+
+## 4. 目录结构
+
+```
+content/site.js          ← 你的主要内容（最常改）
+content/posts/*.md       ← 文章 / 成果
+app/globals.css          ← 主题配色 + 各种特效样式
+app/page.js              ← 首页：把各区块拼起来
+app/layout.js            ← 全局外壳（字体、背景、终端）
+app/writing/[slug]/      ← 文章详情页
+components/              ← 各个区块和效果
+  Hero / About / Projects / Writing / Contact / Footer
+  CircuitBackground      ← 背景电路网络（canvas）
+  SmoothScroll           ← 平滑滚动
+  Terminal               ← 右下角终端彩蛋
+  Reveal                 ← 滚动淡入动画
+lib/posts.js             ← 读取文章
+```
+
+---
+
+## 5. 以后想学 / 想加的（有空再说）
+
+- 把首页换成 Three.js 3D 晶圆/芯片（最炫的一步）
+- 给项目卡片加配图、加更多动效
+- 自定义域名
+
+边学边改，这套代码就是你的练手场。慢慢来 🙂
