@@ -41,10 +41,9 @@ cd ~/Projects/my-site
 bash deploy.sh
 ```
 
-它会自动构建并推到 `gh-pages` 分支，约 1 分钟后线上更新。
+它会自动构建到 `docs/` 并推到 `main`，约 1 分钟后线上更新。
 
-> 源码在 `main` 分支、构建产物在 `gh-pages` 分支（Pages 从这里发布）。
-> 想把源码改动也备份到 GitHub：`git add -A && git commit -m "..." && git push origin main`。
+> 源码和构建产物（`docs/`）都在 `main` 分支；GitHub Pages 从 `main` 的 `/docs` 目录发布。
 
 ---
 
