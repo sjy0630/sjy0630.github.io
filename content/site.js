@@ -5,52 +5,77 @@
 // ============================================================
 
 export const site = {
-  // 首页大标题（会带故障 / glitch 效果）
+  // 首页大标题
   name: "sjy0630",
   // 英文短名（用在导航栏、终端）
   nameEn: "SJY0630",
 
-  // 一句话定位（首页副标题）
-  tagline: "复旦微电子 · 在硅与代码的交叉地带折腾",
+  // 首页自我介绍
+  tagline: "在复旦学习集成电路，也在代码、模型和硬件之间，寻找自己真正想追问的问题。",
+  heroIntro: "这里记录我做过的项目、正在理解的技术，以及一些还没有答案的想法。",
 
   // 浏览器标签页标题 & 搜索引擎描述
-  title: "sjy0630 · 个人主页",
-  description: "复旦大学微电子大一学生 sjy0630 的个人网站。",
+  title: "苏姜禹 · sjy0630",
+  description: "苏姜禹的个人网站，记录集成电路、AI 系统、研究与生活。",
 
-  // About 段落（想写几段就写几段，每段一个引号）
+  // About
   about: [
-    "我是 sjy0630，复旦大学微电子科学与工程专业大一在读。",
-    "兴趣在硬件和算法的交叉地带——从 FPGA 上跑 CNN，到脉冲神经网络（SNN）方向的科研，也喜欢顺着 FlashAttention 这种例子去抠软硬件到底怎么协同。",
-    "这个网站是我记录和展示自己的小据点，会慢慢往里塞作品和成果。",
+    "我是苏姜禹，复旦大学集成电路与微纳电子创新学院的本科生。最初吸引我的是芯片本身，后来我逐渐开始在意：算法怎样变成真实的计算，模型能力受什么系统条件限制，而我们又该怎样判断一个看起来有效的结果是否真的可信。",
+    "过去一年，我接触过脉冲神经网络、忆阻器建模、AI 芯片开发和因果环境中的 Transformer Agent。有些方向让我兴奋，有些经历也让我发现，完成一个项目和真正理解它并不是同一件事。",
+    "这个网站不是一份完成态的履历。我更想用它保存那些真正留下东西的过程：一段代码、一次实验、一张关系图，一个没有被轻易糊弄过去的问题，以及技术之外的生活。",
   ],
 
-  // 项目 / 作品卡片（想加一个就复制一整个 { ... } 段，记得用逗号隔开）
+  // 最近在做什么
+  now: [
+    {
+      label: "研究",
+      title: "因果环境中的 Transformer Agent",
+      desc: "从数据生成、实验协议和工程验证开始，学习怎样把“代码跑通”推进到可信的研究证据。",
+    },
+    {
+      label: "建模",
+      title: "VULCAN-2D",
+      desc: "继续检验二维材料忆阻器的物理启发式模型，让模型假设能够被实验数据反驳或支持。",
+    },
+    {
+      label: "基础",
+      title: "数字逻辑、概率统计与数学建模",
+      desc: "补足能长期服务于 AI、系统与芯片研究的底层能力，不追求一次学完。",
+    },
+  ],
+
+  // 项目 / 作品
   projects: [
     {
-      title: "FPGA × CNN 手写数字识别",
-      desc: "课程拓展项目：在 FPGA 上实现手写数字识别 CNN——把模型从软件一路落到硬件，practice 软硬件协同。",
-      tags: ["FPGA", "CNN", "Verilog"],
+      status: "RESEARCH IN PROGRESS",
+      title: "CausalTransformer",
+      desc: "正在参与的研究项目，关注 Transformer Agent 在因果环境中的学习与能力边界。目前主要参与数据生成、实验协议和工程验证。",
+      note: "它还没有产出足以写成结论的结果，但正在迫使我学习一件重要的事：如何区分代码跑通、指标变化和真正可信的研究证据。",
+      tags: ["Causal Learning", "Transformer Agent", "Research"],
       link: "",
     },
     {
-      title: "脉冲神经网络（SNN）科研",
-      desc: "在类脑计算 / SNN 方向做科研：精读计算机顶会的 SNN 算法论文、复现模型，关注事件相机（event-camera）视觉等方向。",
-      tags: ["SNN", "类脑计算", "PyTorch"],
-      link: "",
+      status: "MODELING · OPEN SOURCE",
+      title: "VULCAN-2D",
+      desc: "一个面向二维材料忆阻器的物理启发式仿真器。我参与了模型整合、I–V 仿真、变异性分析和物理证据审计。",
+      note: "它让我第一次认真面对：模型能够拟合数据，并不意味着它已经解释了真实机制。现在仍需要用更完整的实验数据检验不同物理假设。",
+      tags: ["Memristor", "Physical Modeling", "Simulation"],
+      link: "https://github.com/sjy0630/VULCAN-2D",
     },
     {
-      title: "CS182 深度学习 · 系统自学",
-      desc: "跟伯克利 CS182 从零硬啃深度学习：反向传播、CNN、Transformer、扩散模型、RLHF，配套 14 个作业逐个手撕。",
-      tags: ["Deep Learning", "Transformer", "PyTorch"],
-      link: "",
-    },
-    {
-      title: "从 FlashAttention 看软硬件协同",
-      desc: "研讨课题：用 FlashAttention 拆 GPU 内存层级——为什么“少搬数据”常常比“少算”更重要。",
-      tags: ["GPU", "FlashAttention", "软硬协同"],
+      status: "HACKATHON · 4TH PLACE",
+      title: "Agentic4Systems",
+      desc: "在一次四天的 Agentic AI 芯片 Hackathon 中，我负责 CModel、综合流程和部分 RTL 修改。三人队最终获得第四名、三等奖。",
+      note: "比名次更重要的是，我第一次具体看见：指令语义、参考模型、RTL 实现和 PPA 不是几个孤立模块，而是一条需要不断校准的工程链。",
+      tags: ["CModel", "RTL", "PPA"],
       link: "",
     },
   ],
+
+  life: {
+    title: "技术之外",
+    body: "不写代码的时候，我也喜欢天文、游泳、球类和短途旅行。它们不一定产生什么成果，但会提醒我，生活并不是一条需要持续优化的流水线。",
+  },
 
   // 联系方式 / 社交（留空的不显示）
   socials: {

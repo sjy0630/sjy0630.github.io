@@ -17,11 +17,13 @@ export default function Contact() {
     <section id="contact" className="mx-auto max-w-3xl scroll-mt-24 px-6 py-28 text-center">
       <Reveal>
         <h2 className="mb-6 font-mono text-sm uppercase tracking-[0.3em] text-accent">
-          // contact
+          {"// contact"}
         </h2>
       </Reveal>
       <Reveal>
-        <p className="mb-10 text-2xl font-semibold text-foreground">想聊聊？随时找我。</p>
+        <p className="mx-auto mb-10 max-w-xl text-xl leading-relaxed text-foreground">
+          如果你也在摸索 AI、系统与芯片之间的问题，欢迎来 GitHub 看看，或者留下一次认真交流。
+        </p>
       </Reveal>
       <Reveal>
         <div className="flex flex-wrap justify-center gap-4">

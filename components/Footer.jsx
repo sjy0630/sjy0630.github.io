@@ -7,7 +7,7 @@ export default function Footer() {
         © {new Date().getFullYear()} {site.name} · built with Next.js
       </p>
       <p className="mt-2 opacity-70">
-        提示：右下角有个 <span className="text-accent">{">_"}</span>，点开试试 🙂
+        慢慢建立，诚实记录。右下角仍留着一个小小的 <span className="text-accent">{">_"}</span>。
       </p>
     </footer>
   );

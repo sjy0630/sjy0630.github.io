@@ -17,13 +17,10 @@ export default function Hero() {
         transition={{ duration: 0.6 }}
         className="mb-7 font-mono text-xs tracking-[0.35em] text-accent"
       >
-        &lt;HELLO_WORLD/&gt;
+        NOTES ON BUILDING &amp; BECOMING
       </motion.p>
 
-      <h1
-        data-text={site.name}
-        className="glitch text-5xl font-extrabold tracking-tight sm:text-7xl md:text-8xl"
-      >
+      <h1 className="text-5xl font-extrabold tracking-tight sm:text-7xl md:text-8xl">
         {site.name}
       </h1>
 
@@ -31,16 +28,25 @@ export default function Hero() {
         initial={{ opacity: 0 }}
         animate={{ opacity: 1 }}
         transition={{ delay: 0.45, duration: 0.8 }}
-        className="mt-7 max-w-xl text-base text-muted sm:text-lg"
+        className="mt-7 max-w-2xl text-base leading-relaxed text-foreground/85 sm:text-lg"
       >
         {site.tagline}
+      </motion.p>
+
+      <motion.p
+        initial={{ opacity: 0 }}
+        animate={{ opacity: 1 }}
+        transition={{ delay: 0.7, duration: 0.8 }}
+        className="mt-4 max-w-xl text-sm leading-relaxed text-muted"
+      >
+        {site.heroIntro}
       </motion.p>
 
       <motion.a
         href="#about"
         initial={{ opacity: 0 }}
         animate={{ opacity: 1 }}
-        transition={{ delay: 0.9, duration: 0.8 }}
+        transition={{ delay: 1, duration: 0.8 }}
         className="mt-14 font-mono text-xs text-muted/70 transition-colors hover:text-accent"
       >
         ↓ scroll

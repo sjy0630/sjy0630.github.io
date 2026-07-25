@@ -6,7 +6,7 @@ export default function About() {
     <section id="about" className="mx-auto max-w-3xl scroll-mt-24 px-6 py-28">
       <Reveal>
         <h2 className="mb-8 font-mono text-sm uppercase tracking-[0.3em] text-accent">
-          // about
+          {"// about"}
         </h2>
       </Reveal>
       <div className="space-y-5 text-lg leading-relaxed text-foreground/85">

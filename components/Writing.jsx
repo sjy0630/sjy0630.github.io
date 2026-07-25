@@ -8,17 +8,21 @@ export default function Writing() {
     <section id="writing" className="mx-auto max-w-3xl scroll-mt-24 px-6 py-28">
       <Reveal>
         <h2 className="mb-3 font-mono text-sm uppercase tracking-[0.3em] text-accent">
-          // writing &amp; 成果
+          {"// notes"}
         </h2>
       </Reveal>
       <Reveal>
         <p className="mb-12 text-sm text-muted">
-          想发新内容？往 <code className="text-accent">content/posts/</code> 丢个 .md 文件就行。
+          技术学习、项目复盘，也包括一些方向变化和生活里的问题。
         </p>
       </Reveal>
 
       {posts.length === 0 ? (
-        <p className="text-muted">还没有内容，敬请期待。</p>
+        <Reveal>
+          <div className="rounded-xl border border-dashed border-white/10 px-6 py-8 text-sm leading-relaxed text-muted">
+            这里暂时还是空的。我想等一篇文字真正值得留下时，再从这里开始。
+          </div>
+        </Reveal>
       ) : (
         <ul className="divide-y divide-white/10">
           {posts.map((post, i) => (
