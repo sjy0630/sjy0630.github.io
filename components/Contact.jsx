@@ -14,8 +14,10 @@ export default function Contact({ site }) {
   const links = getLinks(site);
   return (
     <Section id="contact" index="06" title={site.ui.sections.contact}>
-      <p className="font-serif text-2xl leading-snug">{site.ui.contactTitle}</p>
-      <p className="mt-3 leading-relaxed text-foreground/90">{site.ui.contactText}</p>
+      {site.ui.contactTitle ? (
+        <p className="mb-3 font-serif text-2xl leading-snug">{site.ui.contactTitle}</p>
+      ) : null}
+      <p className="leading-relaxed text-foreground/90">{site.ui.contactText}</p>
       <div className="mt-6 flex flex-wrap gap-3 text-sm">
         {links.map((l) => (
           <a

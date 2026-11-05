@@ -32,7 +32,7 @@ export default function Projects({ site }) {
             </div>
             <p className="mt-3 text-sm leading-relaxed text-foreground/85">{p.desc}</p>
             {p.note ? (
-              <p className="mt-4 border-l-2 border-accent/30 pl-4 font-serif text-[15px] italic leading-relaxed text-muted">
+              <p className={`mt-4 border-l-2 border-accent/30 pl-4 text-[15px] leading-relaxed text-muted ${site.lang === "en" ? "font-serif italic" : ""}`}>
                 {p.note}
               </p>
             ) : null}
