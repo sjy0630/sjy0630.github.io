@@ -103,7 +103,7 @@ export const site = {
 
   // Contact / social links (empty ones are hidden)
   socials: {
-    email: "",
+    email: "25803040192@m.fudan.edu.cn",
     github: "https://github.com/sjy0630",
     bilibili: "",
     twitter: "",
