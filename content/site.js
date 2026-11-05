@@ -91,6 +91,7 @@ export const site = {
   honors: [
     { year: "2026", title: "National Scholarship", detail: "" },
     { year: "2026", title: "Agentic4Systems Hackathon — Third Prize", detail: "Agentic AI for chip design" },
+    { year: "2026", title: "Mathematical Contest in Modeling (MCM) — Successful Participant", detail: "Modeling, implementation, and data analysis" },
     { year: "2025", title: "Chinese Mathematics Competitions — Third Prize", detail: "Shanghai division, non-math majors (Category A)" },
   ],
 
