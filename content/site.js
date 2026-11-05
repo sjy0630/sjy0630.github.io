@@ -93,13 +93,13 @@ export const site = {
       link: "",
     },
     {
-      title: "Agentic4Systems Hackathon",
-      status: "2026 · Third prize",
+      title: "AEC GPGPU",
+      status: "Agentic4Systems contest · Third prize",
       kind: "award",
-      desc: "A four-day agentic AI chip-design competition; our team of three won third prize. I worked across the full design flow — from instruction semantics and the C reference model to RTL implementation, synthesis, and PPA evaluation.",
+      desc: "A GPGPU design for a custom 128-bit fixed-length ISA (AEC), built in four days for Track B of the 2026 Agentic4Systems Summer School contest; our team of three won third prize. I worked across the full flow: the C reference model, RTL implementation, RTL/C-model alignment, and synthesis and PPA tuning on the ASAP7 flow.",
       note: "Takeaway: ISA semantics, reference model, RTL, and PPA are tightly coupled — a change in one has to be carried through the rest.",
-      tags: ["Full design flow", "C model", "RTL", "Synthesis", "PPA"],
-      link: "",
+      tags: ["GPGPU", "C model", "RTL", "Synthesis", "PPA"],
+      link: "https://github.com/ephonic/Agentic4SystemSummerSchoolContest",
     },
     {
       title: "WaveLength",
@@ -113,7 +113,7 @@ export const site = {
 
   honors: [
     { year: "2026", title: "National Scholarship", detail: "" },
-    { year: "2026", title: "Agentic4Systems Hackathon — Third Prize", detail: "Agentic AI for chip design" },
+    { year: "2026", title: "Agentic4Systems Summer School GPGPU Design Contest — Third Prize", detail: "Track B: GPGPU RTL design" },
     { year: "2026", title: "Mathematical Contest in Modeling (MCM) — Successful Participant", detail: "" },
     { year: "2025", title: "Chinese Mathematics Competitions — Third Prize", detail: "Shanghai division, non-math majors (Category A)" },
   ],

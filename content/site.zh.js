@@ -89,13 +89,13 @@ export const siteZh = {
       link: "",
     },
     {
-      title: "Agentic4Systems Hackathon",
-      status: "2026 · 三等奖",
+      title: "AEC GPGPU",
+      status: "Agentic4Systems 竞赛 · 三等奖",
       kind: "award",
-      desc: "为期四天的 Agentic AI 芯片设计比赛，三人组队获三等奖。我参与了从指令语义、CModel 参考模型到 RTL 实现、综合与 PPA 评估的完整设计流程。",
+      desc: "2026 Agentic4Systems 暑期学校 GPGPU 设计竞赛（赛道 B）作品：基于自定义的 AEC 128-bit 定长指令集，四天内完成一个 GPGPU 的设计，三人组队获三等奖。我参与了完整流程：CModel 参考模型、RTL 实现、RTL 与 CModel 的对齐验证，以及基于 ASAP7 的综合与 PPA 优化。",
       note: "体会：指令语义、参考模型、RTL 和 PPA 是环环相扣的，任何一处改动都要整条链一起对齐。",
-      tags: ["全流程", "CModel", "RTL", "综合", "PPA"],
-      link: "",
+      tags: ["GPGPU", "CModel", "RTL", "综合", "PPA"],
+      link: "https://github.com/ephonic/Agentic4SystemSummerSchoolContest",
     },
     {
       title: "频遇 WaveLength",
@@ -109,7 +109,7 @@ export const siteZh = {
 
   honors: [
     { year: "2026", title: "国家奖学金", detail: "" },
-    { year: "2026", title: "Agentic4Systems Hackathon 三等奖", detail: "Agentic AI 芯片设计" },
+    { year: "2026", title: "Agentic4Systems 暑期学校 GPGPU 设计竞赛三等奖", detail: "赛道 B：GPGPU RTL 设计" },
     { year: "2026", title: "美国大学生数学建模竞赛 S 奖", detail: "" },
     { year: "2025", title: "全国大学生数学竞赛三等奖", detail: "上海赛区 · 非数学专业 A 类" },
   ],
