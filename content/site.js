@@ -17,12 +17,22 @@ export const site = {
   intro:
     "Undergraduate in Integrated Circuits at Fudan University, working somewhere between code, models, and hardware.",
 
+  location: "Shanghai, China",
+  affiliation: "Fudan University",
+  currently: "Researching Transformer agents in causal environments",
+  interests: ["Integrated circuits", "AI systems", "Memristors", "Causal learning", "Hardware–software co-design"],
+
   about: [
     "I study at the School of Integrated Circuits and Micro-Nano Electronics, Fudan University. Chips were what drew me in first. Over time I've become more interested in how algorithms turn into real computation, what system constraints limit a model's capabilities, and how to tell whether a result that looks good is actually trustworthy.",
     "Over the past year I've worked on spiking neural networks, memristor modeling, AI chip development, and Transformer agents in causal environments. Some of these directions excited me; others taught me that finishing a project and understanding it are not the same thing.",
     "This site isn't a finished résumé. It's a place to keep the parts of the process that stuck: a piece of code, an experiment, a question I didn't let myself gloss over.",
-    "Outside of technical work, I enjoy astronomy, swimming, ball sports, and short trips.",
   ],
+
+  // Life outside technical work
+  life: {
+    text: "When I'm not writing code, I like to look up and get moving. None of it needs to produce anything — it's a reminder that life isn't a pipeline to keep optimizing.",
+    items: ["🔭 Astronomy", "🏊 Swimming", "🏀 Ball sports", "🧳 Short trips"],
+  },
 
   // What I'm focused on right now
   nowUpdated: "2026",
@@ -48,21 +58,27 @@ export const site = {
     {
       title: "CausalTransformer",
       status: "Research · in progress",
+      kind: "progress",
       desc: "An ongoing research project on how Transformer agents learn in causal environments, and where their capabilities break down. I mainly contribute to data generation, experiment protocols, and engineering validation.",
+      note: "No conclusions yet — but it's teaching me to separate “the code runs”, “a metric moved”, and evidence I can actually trust.",
       tags: ["Causal learning", "Transformer agents"],
       link: "",
     },
     {
       title: "VULCAN-2D",
       status: "Modeling · open source",
+      kind: "open",
       desc: "A physics-inspired simulator for 2D-material memristors. I worked on model integration, I–V simulation, variability analysis, and auditing the physical evidence behind the model.",
+      note: "The first time I really faced it: a model that fits the data hasn't necessarily explained the mechanism.",
       tags: ["Memristors", "Physical modeling", "Simulation"],
       link: "https://github.com/sjy0630/VULCAN-2D",
     },
     {
       title: "Agentic4Systems",
       status: "Hackathon · 4th place",
-      desc: "A four-day Agentic AI chip hackathon. I was responsible for the C model, the synthesis flow, and part of the RTL changes; our three-person team placed fourth (third prize). It was the first time I saw how ISA semantics, reference models, RTL, and PPA form one chain that has to be kept in sync.",
+      kind: "award",
+      desc: "A four-day Agentic AI chip hackathon. I was responsible for the C model, the synthesis flow, and part of the RTL changes; our three-person team placed fourth (third prize).",
+      note: "More than the ranking: ISA semantics, reference model, RTL, and PPA aren't separate boxes — they're one chain that has to be kept in sync.",
       tags: ["C model", "RTL", "PPA"],
       link: "",
     },

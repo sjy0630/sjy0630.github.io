@@ -9,9 +9,12 @@ const links = [
 
 export default function Nav() {
   return (
-    <header className="flex items-center justify-between py-6 text-sm">
-      <a href="#top" className="font-medium text-foreground">
-        {site.handle}
+    <header className="sticky top-0 z-20 -mx-5 flex bg-background/85 px-5 backdrop-blur sm:-mx-6 sm:px-6 border-b border-transparent items-center justify-between py-4 text-sm">
+      <a href="#top" className="flex items-center gap-2 font-medium text-foreground">
+        <span className="flex h-7 w-7 items-center justify-center rounded-md bg-foreground font-serif text-sm text-background">
+          {site.name.split(" ").map((w) => w[0]).join("")}
+        </span>
+        <span className="hidden sm:inline">{site.handle}</span>
       </a>
       <nav>
         <ul className="flex gap-5 text-muted">

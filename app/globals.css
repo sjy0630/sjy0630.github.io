@@ -4,31 +4,46 @@
    Theme — change these variables to recolor the whole site.
 ---------------------------------------------------------------- */
 :root {
-  --bg: #fbfbf9;
+  --bg: #fafaf7;
+  --surface: #ffffff;
   --fg: #1c1c1a;
   --muted: #6b6b66;
   --accent: #2f5d8a;
-  --line: #e6e5e0;
+  --line: #e7e6e0;
+  --dot: #d9d8d1;
+  --ok: #2f8a5b;     /* open source */
+  --warn: #b7791f;   /* in progress */
+  --award: #7c4dbd;  /* award */
 }
 
 @media (prefers-color-scheme: dark) {
   :root {
-    --bg: #121212;
+    --bg: #111213;
+    --surface: #18191b;
     --fg: #e8e6e1;
     --muted: #9a9892;
     --accent: #8db4dc;
-    --line: #2a2a28;
+    --line: #2a2b2d;
+    --dot: #2c2d30;
+    --ok: #6cc596;
+    --warn: #e0b061;
+    --award: #b896ec;
   }
 }
 
 @theme inline {
   --color-background: var(--bg);
+  --color-surface: var(--surface);
   --color-foreground: var(--fg);
   --color-muted: var(--muted);
   --color-accent: var(--accent);
   --color-line: var(--line);
+  --color-ok: var(--ok);
+  --color-warn: var(--warn);
+  --color-award: var(--award);
   --font-sans: var(--font-geist-sans);
   --font-mono: var(--font-geist-mono);
+  --font-serif: var(--font-newsreader);
 }
 
 html {
@@ -53,6 +68,29 @@ a.link {
   transition: text-decoration-color 0.15s;
 }
 a.link:hover { text-decoration-color: var(--accent); }
+
+/* Faint dot grid behind the hero */
+.dot-grid {
+  background-image: radial-gradient(var(--dot) 1px, transparent 1px);
+  background-size: 22px 22px;
+  -webkit-mask-image: radial-gradient(ellipse 70% 60% at 70% 40%, #000 20%, transparent 75%);
+          mask-image: radial-gradient(ellipse 70% 60% at 70% 40%, #000 20%, transparent 75%);
+}
+
+/* One gentle entrance for the hero, nothing else moves */
+.rise { animation: rise 0.7s cubic-bezier(0.22, 1, 0.36, 1) both; }
+@keyframes rise { from { opacity: 0; transform: translateY(8px); } to { opacity: 1; transform: none; } }
+
+.pulse { animation: pulse 2.4s ease-out infinite; }
+@keyframes pulse {
+  0% { box-shadow: 0 0 0 0 color-mix(in srgb, var(--ok) 45%, transparent); }
+  70%, 100% { box-shadow: 0 0 0 6px transparent; }
+}
+
+@media (prefers-reduced-motion: reduce) {
+  .rise, .pulse { animation: none; }
+  html { scroll-behavior: auto; }
+}
 
 /* ---------- Markdown post body ---------- */
 .md-body h2 { font-size: 1.4rem; font-weight: 600; margin-top: 1.6rem; }

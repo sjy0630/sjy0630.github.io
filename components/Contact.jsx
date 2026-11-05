@@ -14,18 +14,25 @@ function getLinks() {
 export default function Contact() {
   const links = getLinks();
   return (
-    <Section id="contact" title="Contact">
-      <p className="leading-relaxed text-foreground/90">
+    <Section id="contact" index="05" title="Contact">
+      <p className="font-serif text-2xl leading-snug">Let&apos;s talk.</p>
+      <p className="mt-3 leading-relaxed text-foreground/90">
         If you&apos;re also working on problems between AI, systems, and chips, I&apos;d be glad to hear
         from you.
       </p>
-      <p className="mt-4 flex flex-wrap gap-5 text-sm">
+      <div className="mt-6 flex flex-wrap gap-3 text-sm">
         {links.map((l) => (
-          <a key={l.label} href={l.href} className="link" target="_blank" rel="noopener noreferrer">
-            {l.label}
+          <a
+            key={l.label}
+            href={l.href}
+            target="_blank"
+            rel="noopener noreferrer"
+            className="rounded-md border border-line bg-surface px-4 py-2 transition-colors hover:border-accent/50 hover:text-accent"
+          >
+            {l.label} →
           </a>
         ))}
-      </p>
+      </div>
     </Section>
   );
 }
