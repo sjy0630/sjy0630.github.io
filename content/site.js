@@ -46,7 +46,7 @@ export const site = {
 
   about: [
     "I'm an undergraduate at the College of Integrated Circuits and Micro-Nano Electronics, Fudan University (entered 2025). My interests are computer architecture, digital IC design, and AI hardware acceleration — in particular, how algorithms and hardware can be designed together so models run efficiently on chips.",
-    "In research, I've worked on physical modeling and simulator development for 2D-material memristors, and on Transformer-based causal inference. I've also competed in an agentic AI chip-design hackathon and the Mathematical Contest in Modeling. Outside class I'm studying MIT 6.004 (computer architecture) and MIT 6.5940 (efficient deep learning).",
+    "In research, I've worked on physical modeling and simulator development for 2D-material memristors, and on Transformer-based causal inference. Outside class I'm studying MIT 6.004 (computer architecture) and MIT 6.5940 (efficient deep learning).",
     "This site collects my projects and notes, and I update it as I go.",
   ],
 

@@ -43,7 +43,7 @@
   --color-award: var(--award);
   --font-sans: var(--font-geist-sans);
   --font-mono: var(--font-geist-mono);
-  --font-serif: var(--font-newsreader), "Songti SC", "Noto Serif SC", "Source Han Serif SC", serif;
+  --font-serif: var(--font-newsreader), var(--font-noto-serif-sc), "Songti SC", serif;
 }
 
 html {
@@ -91,6 +91,16 @@ a.link:hover { text-decoration-color: var(--accent); }
   .rise, .pulse { animation: none; }
   html { scroll-behavior: auto; }
 }
+
+/* ---------- Chinese typography ----------
+   CJK text needs more line height and a touch of tracking to breathe;
+   headings use Noto Serif SC (loaded in layout.js) at a heavier weight. */
+[lang="zh-CN"] p { line-height: 1.9; letter-spacing: 0.02em; }
+[lang="zh-CN"] h1.font-serif { font-weight: 500; letter-spacing: 0.06em; }
+[lang="zh-CN"] h1.font-serif > span { letter-spacing: normal; }
+[lang="zh-CN"] h2.font-serif { font-weight: 600; letter-spacing: 0.12em; font-size: 1.375rem; }
+[lang="zh-CN"] h3 { letter-spacing: 0.02em; }
+[lang="zh-CN"] h3.font-serif { font-weight: 500; }
 
 /* ---------- Markdown post body ---------- */
 .md-body h2 { font-size: 1.4rem; font-weight: 600; margin-top: 1.6rem; }

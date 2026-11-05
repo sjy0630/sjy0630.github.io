@@ -1,4 +1,4 @@
-import { Geist, Geist_Mono, Newsreader } from "next/font/google";
+import { Geist, Geist_Mono, Newsreader, Noto_Serif_SC } from "next/font/google";
 import "./globals.css";
 import { site } from "@/content/site";
 
@@ -8,6 +8,14 @@ const newsreader = Newsreader({
   variable: "--font-newsreader",
   subsets: ["latin"],
   style: ["normal", "italic"],
+});
+// Chinese serif for headings. Served as unicode-range slices, so a page only
+// downloads the slices for the characters it actually uses.
+const notoSerifSC = Noto_Serif_SC({
+  variable: "--font-noto-serif-sc",
+  weight: ["500", "600"],
+  preload: false,
+  display: "swap",
 });
 
 export const metadata = {
@@ -28,7 +36,7 @@ export const metadata = {
 
 export default function RootLayout({ children }) {
   return (
-    <html lang="en" className={`${geistSans.variable} ${geistMono.variable} ${newsreader.variable} antialiased`}>
+    <html lang="en" className={`${geistSans.variable} ${geistMono.variable} ${newsreader.variable} ${notoSerifSC.variable} antialiased`}>
       <body className="min-h-screen overflow-x-clip bg-background text-foreground">{children}</body>
     </html>
   );
