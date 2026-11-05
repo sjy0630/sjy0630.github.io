@@ -4,7 +4,7 @@ import Section from "@/components/Section";
 export default function Life() {
   if (!site.life) return null;
   return (
-    <Section id="life" index="04" title="Elsewhere">
+    <Section id="life" index="05" title="Elsewhere">
       <p className="leading-relaxed text-foreground/90">{site.life.text}</p>
       <ul className="mt-5 flex flex-wrap gap-2">
         {site.life.items.map((t) => (

@@ -4,6 +4,7 @@ const links = [
   { href: "#about", label: "About" },
   { href: "#now", label: "Now" },
   { href: "#projects", label: "Projects" },
+  { href: "#honors", label: "Honors" },
   { href: "#contact", label: "Contact" },
 ];
 
@@ -17,7 +18,7 @@ export default function Nav() {
         <span className="hidden sm:inline">{site.handle}</span>
       </a>
       <nav>
-        <ul className="flex gap-5 text-muted">
+        <ul className="flex gap-4 text-muted sm:gap-5">
           {links.map((l) => (
             <li key={l.href}>
               <a href={l.href} className="transition-colors hover:text-foreground">

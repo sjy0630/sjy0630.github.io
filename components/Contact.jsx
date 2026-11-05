@@ -14,7 +14,7 @@ function getLinks() {
 export default function Contact() {
   const links = getLinks();
   return (
-    <Section id="contact" index="05" title="Contact">
+    <Section id="contact" index="06" title="Contact">
       <p className="font-serif text-2xl leading-snug">Let&apos;s talk.</p>
       <p className="mt-3 leading-relaxed text-foreground/90">
         If you&apos;re also working on problems between AI, systems, and chips, I&apos;d be glad to hear
