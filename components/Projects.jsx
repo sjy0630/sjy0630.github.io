@@ -1,4 +1,3 @@
-import { site } from "@/content/site";
 import Section from "@/components/Section";
 
 const kindColor = {
@@ -7,9 +6,9 @@ const kindColor = {
   award: "bg-award",
 };
 
-export default function Projects() {
+export default function Projects({ site }) {
   return (
-    <Section id="projects" index="03" title="Projects">
+    <Section id="projects" index="03" title={site.ui.sections.projects}>
       <ul className="space-y-5">
         {site.projects.map((p) => (
           <li

@@ -5,8 +5,30 @@
 
 export const site = {
   name: "Jiangyu Su",
-  nameZh: "苏姜禹",
+  nameAlt: "苏姜禹",
+  nameAltLang: "zh-CN",
   handle: "sjy0630",
+  lang: "en",
+
+  // Interface text (section names, buttons)
+  ui: {
+    sections: {
+      about: "About", now: "Now", projects: "Projects", honors: "Honors",
+      life: "Elsewhere", notes: "Notes", contact: "Contact",
+    },
+    seeProjects: "See projects ↓",
+    email: "Email",
+    cv: "CV",
+    toolkit: "Toolkit",
+    updated: "Updated",
+    contactTitle: "Let's talk.",
+    contactText: "If you're also working on problems between AI, systems, and chips, I'd be glad to hear from you.",
+    backToTop: "Back to top ↑",
+    homeHref: "#top",
+    switchHref: "/zh/",
+    switchLabel: "中文",
+    switchLang: "zh-CN",
+  },
 
   // Browser tab title & search description
   title: "Jiangyu Su",

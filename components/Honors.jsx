@@ -1,10 +1,9 @@
-import { site } from "@/content/site";
 import Section from "@/components/Section";
 
-export default function Honors() {
+export default function Honors({ site }) {
   if (!site.honors?.length) return null;
   return (
-    <Section id="honors" index="04" title="Honors">
+    <Section id="honors" index="04" title={site.ui.sections.honors}>
       <ul className="divide-y divide-line">
         {site.honors.map((h) => (
           <li key={h.title} className="grid grid-cols-[3.5rem_1fr] gap-3 py-3 first:pt-0">

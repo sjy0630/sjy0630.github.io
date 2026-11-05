@@ -1,7 +1,6 @@
-import { site } from "@/content/site";
 import Section from "@/components/Section";
 
-function getLinks() {
+function getLinks(site) {
   const s = site.socials || {};
   const out = [];
   if (s.email) out.push({ label: s.email, href: `mailto:${s.email}` });
@@ -11,15 +10,12 @@ function getLinks() {
   return out;
 }
 
-export default function Contact() {
-  const links = getLinks();
+export default function Contact({ site }) {
+  const links = getLinks(site);
   return (
-    <Section id="contact" index="06" title="Contact">
-      <p className="font-serif text-2xl leading-snug">Let&apos;s talk.</p>
-      <p className="mt-3 leading-relaxed text-foreground/90">
-        If you&apos;re also working on problems between AI, systems, and chips, I&apos;d be glad to hear
-        from you.
-      </p>
+    <Section id="contact" index="06" title={site.ui.sections.contact}>
+      <p className="font-serif text-2xl leading-snug">{site.ui.contactTitle}</p>
+      <p className="mt-3 leading-relaxed text-foreground/90">{site.ui.contactText}</p>
       <div className="mt-6 flex flex-wrap gap-3 text-sm">
         {links.map((l) => (
           <a

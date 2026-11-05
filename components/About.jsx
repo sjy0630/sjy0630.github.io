@@ -1,9 +1,8 @@
-import { site } from "@/content/site";
 import Section from "@/components/Section";
 
-export default function About() {
+export default function About({ site }) {
   return (
-    <Section id="about" index="01" title="About">
+    <Section id="about" index="01" title={site.ui.sections.about}>
       <div className="space-y-4 leading-relaxed text-foreground/90">
         {site.about.map((p, i) => (
           <p key={i} className={i === 0 ? "text-lg" : ""}>
@@ -13,7 +12,7 @@ export default function About() {
       </div>
       {site.toolkit?.length ? (
         <div className="mt-7 flex flex-wrap items-center gap-2">
-          <span className="mr-1 font-mono text-xs text-muted">Toolkit</span>
+          <span className="mr-1 font-mono text-xs text-muted">{site.ui.toolkit}</span>
           {site.toolkit.map((t) => (
             <span key={t} className="rounded border border-line bg-surface px-2 py-0.5 font-mono text-xs">
               {t}

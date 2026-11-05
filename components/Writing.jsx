@@ -3,11 +3,11 @@ import { getAllPosts } from "@/lib/posts";
 import Section from "@/components/Section";
 
 // Only shown once there is at least one post in content/posts/.
-export default function Writing() {
+export default function Writing({ site }) {
   const posts = getAllPosts();
   if (posts.length === 0) return null;
   return (
-    <Section id="writing" title="Notes">
+    <Section id="writing" title={site.ui.sections.notes}>
       <ul className="space-y-5">
         {posts.map((post) => (
           <li key={post.slug}>

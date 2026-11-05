@@ -43,7 +43,7 @@
   --color-award: var(--award);
   --font-sans: var(--font-geist-sans);
   --font-mono: var(--font-geist-mono);
-  --font-serif: var(--font-newsreader);
+  --font-serif: var(--font-newsreader), "Songti SC", "Noto Serif SC", "Source Han Serif SC", serif;
 }
 
 html {
