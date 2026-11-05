@@ -9,6 +9,15 @@ function GitHubIcon() {
   );
 }
 
+function MailIcon() {
+  return (
+    <svg viewBox="0 0 16 16" width="16" height="16" fill="none" stroke="currentColor" strokeWidth="1.4" aria-hidden="true">
+      <rect x="1.5" y="3" width="13" height="10" rx="1.5" />
+      <path d="M2 4l6 5 6-5" strokeLinejoin="round" />
+    </svg>
+  );
+}
+
 export default function Hero() {
   return (
     <section id="top" className="relative pt-14 pb-16 sm:pt-20 sm:pb-20">
@@ -52,6 +61,15 @@ export default function Hero() {
             className="inline-flex items-center gap-2 rounded-md bg-foreground px-4 py-2 text-background transition-opacity hover:opacity-85"
           >
             <GitHubIcon /> GitHub
+          </a>
+        ) : null}
+        {site.socials?.email ? (
+          <a
+            href={`mailto:${site.socials.email}`}
+            title={site.socials.email}
+            className="inline-flex items-center gap-2 rounded-md border border-line bg-surface px-4 py-2 text-foreground transition-colors hover:border-accent/50"
+          >
+            <MailIcon /> Email
           </a>
         ) : null}
         <a
