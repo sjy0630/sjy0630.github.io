@@ -22,7 +22,7 @@ export const site = {
     toolkit: "Toolkit",
     updated: "Updated",
     contactTitle: "Let's talk.",
-    contactText: "If you're also working on problems between AI, systems, and chips, I'd be glad to hear from you.",
+    contactText: "If you work on computer architecture, AI hardware, or chip design, or just want to talk, feel free to email me.",
     backToTop: "Back to top ↑",
     homeHref: "#top",
     switchHref: "/zh/",
@@ -33,21 +33,21 @@ export const site = {
   // Browser tab title & search description
   title: "Jiangyu Su",
   description:
-    "Personal site of Jiangyu Su (苏姜禹) — integrated circuits, AI systems, research notes.",
+    "Jiangyu Su (苏姜禹), undergraduate in Integrated Circuits at Fudan University. Computer architecture, digital IC design, and AI accelerators.",
 
   // One-line intro under the name
   intro:
-    "Second-year undergraduate in Integrated Circuits at Fudan University, drawn to computer architecture, digital IC design, and hardware for AI.",
+    "Undergraduate in Integrated Circuits at Fudan University, interested in computer architecture, digital IC design, and AI accelerators.",
 
   location: "Shanghai, China",
   affiliation: "Fudan University",
-  currently: "Exploring AI accelerators & hardware–software co-design",
+  currently: "Current focus: AI accelerators & HW/SW co-design",
   interests: ["AI accelerators", "HW/SW co-design", "Computer architecture", "Digital IC design", "Memristors", "Causal learning"],
 
   about: [
-    "I'm an undergraduate at the College of Integrated Circuits and Micro-Nano Electronics, Fudan University (class of 2025). Chips were what drew me in first. Over time I've become more interested in the whole path from an algorithm to silicon: how models turn into real computation, what system constraints limit their capabilities, and how to tell whether a result that looks good is actually trustworthy.",
-    "So far that has taken me through physical modeling of memristors, Transformer-based causal inference, and an agentic chip-design hackathon. Alongside coursework I've been working through MIT 6.004 (computer architecture) and MIT 6.5940 (efficient deep learning), which is where my current interest in AI accelerators and hardware–software co-design comes from.",
-    "This site isn't a finished résumé. It's a place to keep the parts of the process that stuck: a piece of code, an experiment, a question I didn't let myself gloss over.",
+    "I'm an undergraduate at the College of Integrated Circuits and Micro-Nano Electronics, Fudan University (entered 2025). My interests are computer architecture, digital IC design, and AI hardware acceleration — in particular, how algorithms and hardware can be designed together so models run efficiently on chips.",
+    "In research, I've worked on physical modeling and simulator development for 2D-material memristors, and on Transformer-based causal inference. I've also competed in an agentic AI chip-design hackathon and the Mathematical Contest in Modeling. Outside class I'm studying MIT 6.004 (computer architecture) and MIT 6.5940 (efficient deep learning).",
+    "This site collects my projects and notes, and I update it as I go.",
   ],
 
   toolkit: ["Python", "PyTorch", "Verilog", "Vivado", "Linux", "Git", "GPU servers"],
@@ -56,19 +56,19 @@ export const site = {
   nowUpdated: "Nov 2026",
   now: [
     {
-      label: "Exploring",
+      label: "Learning",
       title: "AI accelerators & hardware–software co-design",
-      desc: "How model structure, dataflow, compilers, and microarchitecture shape each other — and why the bottleneck is so often memory movement rather than arithmetic. Small experiments so far, like benchmarking GPU matrix multiplication across numeric precisions.",
+      desc: "Studying how model structure, dataflow, compilation, and microarchitecture interact, and why memory access is often the bottleneck. Small experiments so far, such as benchmarking GPU matrix multiplication at different numeric precisions.",
     },
     {
       label: "Research",
       title: "Transformers for causal inference & active experiment design",
-      desc: "Can a model learn latent causal structure from offline data and then decide which experiment to run next? Working on data generation, training, and evaluation, including distribution shift in closed-loop decisions.",
+      desc: "Whether a model can learn causal structure from offline data and decide which experiment to run next. I work on data generation, training, and evaluation.",
     },
     {
       label: "Modeling",
       title: "VULCAN-2D",
-      desc: "Most of the physical modeling is done; now waiting on more experimental data to calibrate the model and test its assumptions.",
+      desc: "Physical modeling is mostly done; next is calibrating the model with more experimental data.",
     },
   ],
 
@@ -77,8 +77,8 @@ export const site = {
       title: "VULCAN-2D",
       status: "Research · open source",
       kind: "open",
-      desc: "A multi-scale physical modeling framework and simulator for 2D-material memristors, built as a Fudan Xiyuan undergraduate research project. It covers conductive-filament evolution, charge transport, Joule heating, and device-to-device variability, with numerical models and I–V simulation.",
-      note: "The first time I really faced it: a model that fits the data hasn't necessarily explained the mechanism.",
+      desc: "A multi-scale modeling framework and simulator for 2D-material memristors (Fudan Xiyuan undergraduate research program). It covers conductive-filament evolution, charge transport, Joule heating, and device variability; I worked on numerical modeling, I–V simulation, and variability analysis.",
+      note: "Takeaway: fitting the data doesn't mean a model explains the physics — it still has to be tested against experiments.",
       tags: ["Memristors", "Physical modeling", "Simulation"],
       link: "https://github.com/sjy0630/VULCAN-2D",
     },
@@ -86,8 +86,8 @@ export const site = {
       title: "Causal Transformer",
       status: "Research · in progress",
       kind: "progress",
-      desc: "Research on whether Transformer models can learn latent causal rules from offline data and make their own experimental decisions. I run experiments in PyTorch — data generation, training, evaluation — and have analyzed distribution shift that appears once the model acts in a closed loop.",
-      note: "No conclusions yet — but it's teaching me to separate “the code runs”, “a metric moved”, and evidence I can actually trust.",
+      desc: "Research on Transformer-based causal inference and active experiment design: can a model learn latent causal rules from offline data and choose its own experiments? I handle data generation, training, and evaluation in PyTorch, and have analyzed distribution shift in closed-loop decisions.",
+      note: "Takeaway: code that runs and metrics that improve are still a long way from a trustworthy result.",
       tags: ["Causal inference", "Active experiment design", "PyTorch"],
       link: "",
     },
@@ -95,8 +95,8 @@ export const site = {
       title: "Agentic4Systems Hackathon",
       status: "2026 · Third prize",
       kind: "award",
-      desc: "A four-day agentic AI chip-design hackathon. On a team of three, I was responsible for the C model, the synthesis flow, and part of the RTL changes.",
-      note: "More than the ranking: ISA semantics, reference model, RTL, and PPA aren't separate boxes — they're one chain that has to be kept in sync.",
+      desc: "A four-day agentic AI chip-design competition; our team of three won third prize. I was responsible for the C model, the synthesis flow, and part of the RTL changes.",
+      note: "Takeaway: ISA semantics, reference model, RTL, and PPA are tightly coupled — a change in one has to be carried through the rest.",
       tags: ["C model", "RTL", "Synthesis", "PPA"],
       link: "",
     },
@@ -104,7 +104,7 @@ export const site = {
       title: "WaveLength",
       status: "Startup project · semifinalist",
       kind: "progress",
-      desc: "A campus platform for deeper one-on-one conversations. As a core member of the tech team I led software development. The project reached the semifinals of the 6th Xing·Quan Cup Social Enterprise Innovation Competition (2026).",
+      desc: "A campus platform for in-depth one-on-one conversations. As a core technical member, I worked on software development. The project reached the semifinals of the 6th Xing·Quan Cup Social Enterprise Innovation Competition (2026).",
       tags: ["Product", "Full-stack"],
       link: "",
     },
@@ -113,13 +113,13 @@ export const site = {
   honors: [
     { year: "2026", title: "National Scholarship", detail: "" },
     { year: "2026", title: "Agentic4Systems Hackathon — Third Prize", detail: "Agentic AI for chip design" },
-    { year: "2026", title: "Mathematical Contest in Modeling (MCM) — Successful Participant", detail: "Modeling, implementation, and data analysis" },
+    { year: "2026", title: "Mathematical Contest in Modeling (MCM) — Successful Participant", detail: "" },
     { year: "2025", title: "Chinese Mathematics Competitions — Third Prize", detail: "Shanghai division, non-math majors (Category A)" },
   ],
 
   // Life outside technical work
   life: {
-    text: "Away from the desk I do magic, play guitar, look at the night sky, and try to stay moving. None of it needs to produce anything — it's a reminder that life isn't a pipeline to keep optimizing.",
+    text: "Outside of work I enjoy magic and guitar, as well as astronomy, swimming, and ball sports, and I take short trips when I can.",
     items: ["🃏 Magic", "🎸 Guitar", "🔭 Astronomy", "🏊 Swimming", "🏀 Ball sports", "🧳 Short trips"],
   },
 
