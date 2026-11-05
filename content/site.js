@@ -96,9 +96,9 @@ export const site = {
       title: "Agentic4Systems Hackathon",
       status: "2026 · Third prize",
       kind: "award",
-      desc: "A four-day agentic AI chip-design competition; our team of three won third prize. I was responsible for the C model, the synthesis flow, and part of the RTL changes.",
+      desc: "A four-day agentic AI chip-design competition; our team of three won third prize. I worked across the full design flow — from instruction semantics and the C reference model to RTL implementation, synthesis, and PPA evaluation.",
       note: "Takeaway: ISA semantics, reference model, RTL, and PPA are tightly coupled — a change in one has to be carried through the rest.",
-      tags: ["C model", "RTL", "Synthesis", "PPA"],
+      tags: ["Full design flow", "C model", "RTL", "Synthesis", "PPA"],
       link: "",
     },
     {

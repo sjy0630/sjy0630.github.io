@@ -92,9 +92,9 @@ export const siteZh = {
       title: "Agentic4Systems Hackathon",
       status: "2026 · 三等奖",
       kind: "award",
-      desc: "为期四天的 Agentic AI 芯片设计比赛，三人组队获三等奖。我负责 CModel、综合流程和部分 RTL 修改。",
+      desc: "为期四天的 Agentic AI 芯片设计比赛，三人组队获三等奖。我参与了从指令语义、CModel 参考模型到 RTL 实现、综合与 PPA 评估的完整设计流程。",
       note: "体会：指令语义、参考模型、RTL 和 PPA 是环环相扣的，任何一处改动都要整条链一起对齐。",
-      tags: ["CModel", "RTL", "综合", "PPA"],
+      tags: ["全流程", "CModel", "RTL", "综合", "PPA"],
       link: "",
     },
     {
