@@ -1,85 +1,76 @@
 // ============================================================
-//  ✏️  在这里改你的网站内容（改完保存，网页会自动刷新）
-//  这是你最常动的文件，不用懂 React 也能改。
-//  规则：引号里的中文/链接随便改；留空 "" 的项目不会显示。
+//  ✏️  Site content — edit this file to change what the page says.
+//  Empty strings "" are hidden.
 // ============================================================
 
 export const site = {
-  // 首页大标题
-  name: "sjy0630",
-  // 英文短名（用在导航栏、终端）
-  nameEn: "SJY0630",
+  name: "Jiangyu Su",
+  nameZh: "苏姜禹",
+  handle: "sjy0630",
 
-  // 首页自我介绍
-  tagline: "在复旦学习集成电路，也在代码、模型和硬件之间，寻找自己真正想追问的问题。",
-  heroIntro: "这里记录我做过的项目、正在理解的技术，以及一些还没有答案的想法。",
+  // Browser tab title & search description
+  title: "Jiangyu Su",
+  description:
+    "Personal site of Jiangyu Su (苏姜禹) — integrated circuits, AI systems, research notes.",
 
-  // 浏览器标签页标题 & 搜索引擎描述
-  title: "苏姜禹 · sjy0630",
-  description: "苏姜禹的个人网站，记录集成电路、AI 系统、研究与生活。",
+  // One-line intro under the name
+  intro:
+    "Undergraduate in Integrated Circuits at Fudan University, working somewhere between code, models, and hardware.",
 
-  // About
   about: [
-    "我是苏姜禹，复旦大学集成电路与微纳电子创新学院的本科生。最初吸引我的是芯片本身，后来我逐渐开始在意：算法怎样变成真实的计算，模型能力受什么系统条件限制，而我们又该怎样判断一个看起来有效的结果是否真的可信。",
-    "过去一年，我接触过脉冲神经网络、忆阻器建模、AI 芯片开发和因果环境中的 Transformer Agent。有些方向让我兴奋，有些经历也让我发现，完成一个项目和真正理解它并不是同一件事。",
-    "这个网站不是一份完成态的履历。我更想用它保存那些真正留下东西的过程：一段代码、一次实验、一张关系图，一个没有被轻易糊弄过去的问题，以及技术之外的生活。",
+    "I study at the School of Integrated Circuits and Micro-Nano Electronics, Fudan University. Chips were what drew me in first. Over time I've become more interested in how algorithms turn into real computation, what system constraints limit a model's capabilities, and how to tell whether a result that looks good is actually trustworthy.",
+    "Over the past year I've worked on spiking neural networks, memristor modeling, AI chip development, and Transformer agents in causal environments. Some of these directions excited me; others taught me that finishing a project and understanding it are not the same thing.",
+    "This site isn't a finished résumé. It's a place to keep the parts of the process that stuck: a piece of code, an experiment, a question I didn't let myself gloss over.",
+    "Outside of technical work, I enjoy astronomy, swimming, ball sports, and short trips.",
   ],
 
-  // 最近在做什么
+  // What I'm focused on right now
+  nowUpdated: "2026",
   now: [
     {
-      label: "研究",
-      title: "因果环境中的 Transformer Agent",
-      desc: "从数据生成、实验协议和工程验证开始，学习怎样把“代码跑通”推进到可信的研究证据。",
+      label: "Research",
+      title: "Transformer agents in causal environments",
+      desc: "Working on data generation, experiment protocols, and engineering validation — learning how to move from “the code runs” to evidence that holds up.",
     },
     {
-      label: "建模",
+      label: "Modeling",
       title: "VULCAN-2D",
-      desc: "继续检验二维材料忆阻器的物理启发式模型，让模型假设能够被实验数据反驳或支持。",
+      desc: "Continuing to test a physics-inspired model of 2D-material memristors, so its assumptions can be supported or refuted by experimental data.",
     },
     {
-      label: "基础",
-      title: "数字逻辑、概率统计与数学建模",
-      desc: "补足能长期服务于 AI、系统与芯片研究的底层能力，不追求一次学完。",
+      label: "Foundations",
+      title: "Digital logic, probability & statistics, mathematical modeling",
+      desc: "Building the fundamentals that will keep paying off across AI, systems, and chip research.",
     },
   ],
 
-  // 项目 / 作品
   projects: [
     {
-      status: "RESEARCH IN PROGRESS",
       title: "CausalTransformer",
-      desc: "正在参与的研究项目，关注 Transformer Agent 在因果环境中的学习与能力边界。目前主要参与数据生成、实验协议和工程验证。",
-      note: "它还没有产出足以写成结论的结果，但正在迫使我学习一件重要的事：如何区分代码跑通、指标变化和真正可信的研究证据。",
-      tags: ["Causal Learning", "Transformer Agent", "Research"],
+      status: "Research · in progress",
+      desc: "An ongoing research project on how Transformer agents learn in causal environments, and where their capabilities break down. I mainly contribute to data generation, experiment protocols, and engineering validation.",
+      tags: ["Causal learning", "Transformer agents"],
       link: "",
     },
     {
-      status: "MODELING · OPEN SOURCE",
       title: "VULCAN-2D",
-      desc: "一个面向二维材料忆阻器的物理启发式仿真器。我参与了模型整合、I–V 仿真、变异性分析和物理证据审计。",
-      note: "它让我第一次认真面对：模型能够拟合数据，并不意味着它已经解释了真实机制。现在仍需要用更完整的实验数据检验不同物理假设。",
-      tags: ["Memristor", "Physical Modeling", "Simulation"],
+      status: "Modeling · open source",
+      desc: "A physics-inspired simulator for 2D-material memristors. I worked on model integration, I–V simulation, variability analysis, and auditing the physical evidence behind the model.",
+      tags: ["Memristors", "Physical modeling", "Simulation"],
       link: "https://github.com/sjy0630/VULCAN-2D",
     },
     {
-      status: "HACKATHON · 4TH PLACE",
       title: "Agentic4Systems",
-      desc: "在一次四天的 Agentic AI 芯片 Hackathon 中，我负责 CModel、综合流程和部分 RTL 修改。三人队最终获得第四名、三等奖。",
-      note: "比名次更重要的是，我第一次具体看见：指令语义、参考模型、RTL 实现和 PPA 不是几个孤立模块，而是一条需要不断校准的工程链。",
-      tags: ["CModel", "RTL", "PPA"],
+      status: "Hackathon · 4th place",
+      desc: "A four-day Agentic AI chip hackathon. I was responsible for the C model, the synthesis flow, and part of the RTL changes; our three-person team placed fourth (third prize). It was the first time I saw how ISA semantics, reference models, RTL, and PPA form one chain that has to be kept in sync.",
+      tags: ["C model", "RTL", "PPA"],
       link: "",
     },
   ],
 
-  life: {
-    title: "技术之外",
-    body: "不写代码的时候，我也喜欢天文、游泳、球类和短途旅行。它们不一定产生什么成果，但会提醒我，生活并不是一条需要持续优化的流水线。",
-  },
-
-  // 联系方式 / 社交（留空的不显示）
+  // Contact / social links (empty ones are hidden)
   socials: {
-    email: "", // 你选了不公开邮箱
+    email: "",
     github: "https://github.com/sjy0630",
     bilibili: "",
     twitter: "",

@@ -1,7 +1,7 @@
 # 我的个人网站
 
-一个炫酷暗色风的个人主页：平滑滚动 + 电路霓虹背景 + glitch 标题 + 终端彩蛋。
-技术栈：**Next.js 16 · React 19 · Tailwind v4 · motion · lenis**。
+一个简洁的英文个人主页（自动跟随系统浅色 / 深色模式）。
+技术栈：**Next.js 16 · React 19 · Tailwind v4**。
 
 ---
 
@@ -20,13 +20,13 @@ npm run dev
 ## 2. 怎么改内容（最常用，不用懂代码）
 
 **① 改文字 / 项目 / 联系方式 →** 编辑 `content/site.js`
-里面有中文注释，照着改引号里的内容就行。名字、简介、项目卡片、GitHub 链接都在这。
+照着改引号里的英文内容就行。名字、简介、项目卡片、GitHub 链接都在这。
 
 **② 发文章 / 传成果 →** 在 `content/posts/` 里新建一个 `.md` 文件
-开头照着 `hello-world.md` 写标题和日期，下面用 Markdown 写正文，自动出现在首页 Writing 区。
+开头照着 `hello-world.md` 写标题和日期，下面用 Markdown 写正文，自动出现在首页 Notes 区（没有文章时该区块隐藏）。
 
-**③ 换配色 →** 编辑 `app/globals.css` 顶部 `:root` 里的几个颜色变量
-（`--accent` 是主强调色，改一个值整站跟着变）。
+**③ 换配色 →** 编辑 `app/globals.css` 顶部 `:root`（浅色）和 dark 媒体查询里的颜色变量
+（`--accent` 是链接颜色）。
 
 ---
 

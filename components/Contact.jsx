@@ -1,5 +1,5 @@
 import { site } from "@/content/site";
-import Reveal from "@/components/Reveal";
+import Section from "@/components/Section";
 
 function getLinks() {
   const s = site.socials || {};
@@ -14,32 +14,18 @@ function getLinks() {
 export default function Contact() {
   const links = getLinks();
   return (
-    <section id="contact" className="mx-auto max-w-3xl scroll-mt-24 px-6 py-28 text-center">
-      <Reveal>
-        <h2 className="mb-6 font-mono text-sm uppercase tracking-[0.3em] text-accent">
-          {"// contact"}
-        </h2>
-      </Reveal>
-      <Reveal>
-        <p className="mx-auto mb-10 max-w-xl text-xl leading-relaxed text-foreground">
-          如果你也在摸索 AI、系统与芯片之间的问题，欢迎来 GitHub 看看，或者留下一次认真交流。
-        </p>
-      </Reveal>
-      <Reveal>
-        <div className="flex flex-wrap justify-center gap-4">
-          {links.map((l) => (
-            <a
-              key={l.label}
-              href={l.href}
-              target="_blank"
-              rel="noopener noreferrer"
-              className="neon-border rounded-full px-6 py-2.5 font-mono text-sm text-foreground transition-all hover:-translate-y-0.5 hover:text-accent"
-            >
-              {l.label}
-            </a>
-          ))}
-        </div>
-      </Reveal>
-    </section>
+    <Section id="contact" title="Contact">
+      <p className="leading-relaxed text-foreground/90">
+        If you&apos;re also working on problems between AI, systems, and chips, I&apos;d be glad to hear
+        from you.
+      </p>
+      <p className="mt-4 flex flex-wrap gap-5 text-sm">
+        {links.map((l) => (
+          <a key={l.label} href={l.href} className="link" target="_blank" rel="noopener noreferrer">
+            {l.label}
+          </a>
+        ))}
+      </p>
+    </Section>
   );
 }
