@@ -48,11 +48,6 @@ export const site = {
       title: "VULCAN-2D",
       desc: "Most of the physical modeling is done; now waiting on more experimental data to calibrate the model and test its assumptions.",
     },
-    {
-      label: "Coursework",
-      title: "Analog electronics, solid-state physics",
-      desc: "Plus self-study of MIT 6.004 and 6.5940 on the side.",
-    },
   ],
 
   projects: [
@@ -94,7 +89,7 @@ export const site = {
   ],
 
   honors: [
-    { year: "2026", title: "National Scholarship", detail: "GPA 4.00 / 4.00, ranked 1st in the college (first year)" },
+    { year: "2026", title: "National Scholarship", detail: "" },
     { year: "2026", title: "Agentic4Systems Hackathon — Third Prize", detail: "Agentic AI for chip design" },
     { year: "2025", title: "Chinese Mathematics Competitions — Third Prize", detail: "Shanghai division, non-math majors (Category A)" },
   ],
