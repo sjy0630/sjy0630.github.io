@@ -15,7 +15,7 @@ export const siteZh = {
   ui: {
     sections: {
       about: "关于", now: "近况", projects: "项目", honors: "荣誉",
-      life: "技术之外", notes: "笔记", contact: "联系",
+      life: "爱好", notes: "笔记", contact: "联系",
     },
     seeProjects: "项目经历 ↓",
     email: "邮箱",
@@ -114,8 +114,15 @@ export const siteZh = {
   ],
 
   life: {
-    text: "课余喜欢变魔术和弹吉他，也喜欢天文、游泳和打球，有空会去周边短途旅行。",
-    items: ["🃏 魔术", "🎸 吉他", "🔭 天文", "🏊 游泳", "🏀 球类", "🧳 短途旅行"],
+    text: "",
+    items: [
+      { icon: "magic", label: "魔术" },
+      { icon: "guitar", label: "吉他" },
+      { icon: "astronomy", label: "天文" },
+      { icon: "swimming", label: "游泳" },
+      { icon: "ball", label: "球类" },
+      { icon: "travel", label: "短途旅行" },
+    ],
   },
 
   socials: site.socials,

@@ -119,8 +119,15 @@ export const site = {
 
   // Life outside technical work
   life: {
-    text: "Outside of work I enjoy magic and guitar, as well as astronomy, swimming, and ball sports, and I take short trips when I can.",
-    items: ["🃏 Magic", "🎸 Guitar", "🔭 Astronomy", "🏊 Swimming", "🏀 Ball sports", "🧳 Short trips"],
+    text: "",
+    items: [
+      { icon: "magic", label: "Magic" },
+      { icon: "guitar", label: "Guitar" },
+      { icon: "astronomy", label: "Astronomy" },
+      { icon: "swimming", label: "Swimming" },
+      { icon: "ball", label: "Ball sports" },
+      { icon: "travel", label: "Short trips" },
+    ],
   },
 
   // Contact / social links (empty ones are hidden)
