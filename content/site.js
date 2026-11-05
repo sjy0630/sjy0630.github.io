@@ -20,7 +20,7 @@ export const site = {
   location: "Shanghai, China",
   affiliation: "Fudan University",
   currently: "Researching Transformer agents in causal environments",
-  interests: ["Integrated circuits", "AI systems", "Memristors", "Causal learning", "Hardware–software co-design"],
+  interests: ["AI accelerators", "HW/SW co-design", "Integrated circuits", "Memristors", "Causal learning"],
 
   about: [
     "I study at the School of Integrated Circuits and Micro-Nano Electronics, Fudan University. Chips were what drew me in first. Over time I've become more interested in how algorithms turn into real computation, what system constraints limit a model's capabilities, and how to tell whether a result that looks good is actually trustworthy.",
@@ -30,13 +30,18 @@ export const site = {
 
   // Life outside technical work
   life: {
-    text: "When I'm not writing code, I like to look up and get moving. None of it needs to produce anything — it's a reminder that life isn't a pipeline to keep optimizing.",
-    items: ["🔭 Astronomy", "🏊 Swimming", "🏀 Ball sports", "🧳 Short trips"],
+    text: "Away from the desk I do close-up magic, play guitar, look at the night sky, and try to stay moving. None of it needs to produce anything — it's a reminder that life isn't a pipeline to keep optimizing.",
+    items: ["🃏 Magic", "🎸 Guitar", "🔭 Astronomy", "🏊 Swimming", "🏀 Ball sports", "🧳 Short trips"],
   },
 
   // What I'm focused on right now
   nowUpdated: "2026",
   now: [
+    {
+      label: "Exploring",
+      title: "AI accelerators & hardware–software co-design",
+      desc: "How model structure, dataflow, compilers, and microarchitecture shape each other — and why the bottleneck is so often memory movement rather than arithmetic.",
+    },
     {
       label: "Research",
       title: "Transformer agents in causal environments",
