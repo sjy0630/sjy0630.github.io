@@ -45,10 +45,10 @@ const icons = {
   ),
 };
 
-export default function Life({ site }) {
+export default function Life({ site, index }) {
   if (!site.life?.items?.length) return null;
   return (
-    <Section id="life" index="05" title={site.ui.sections.life}>
+    <Section id="life" index={index} title={site.ui.sections.life}>
       {site.life.text ? <p className="mb-6 leading-relaxed text-foreground/90">{site.life.text}</p> : null}
       <ul className="grid grid-cols-2 gap-3 sm:grid-cols-3">
         {site.life.items.map((item) => (

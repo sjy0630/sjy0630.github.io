@@ -25,6 +25,7 @@ export const siteZh = {
     contactTitle: "",
     contactText: "对体系结构、AI 硬件或芯片设计方向感兴趣，或者有合作、交流的想法，欢迎发邮件联系我。",
     backToTop: "回到顶部 ↑",
+    backHome: "← 返回首页",
     homeHref: "#top",
     switchHref: "/",
     switchLabel: "EN",

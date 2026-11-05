@@ -10,10 +10,10 @@ function getLinks(site) {
   return out;
 }
 
-export default function Contact({ site }) {
+export default function Contact({ site, index }) {
   const links = getLinks(site);
   return (
-    <Section id="contact" index="06" title={site.ui.sections.contact}>
+    <Section id="contact" index={index} title={site.ui.sections.contact}>
       {site.ui.contactTitle ? (
         <p className="mb-3 font-serif text-2xl leading-snug">{site.ui.contactTitle}</p>
       ) : null}

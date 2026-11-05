@@ -6,9 +6,9 @@ const kindColor = {
   award: "bg-award",
 };
 
-export default function Projects({ site }) {
+export default function Projects({ site, index }) {
   return (
-    <Section id="projects" index="03" title={site.ui.sections.projects}>
+    <Section id="projects" index={index} title={site.ui.sections.projects}>
       <ul className="space-y-5">
         {site.projects.map((p) => (
           <li

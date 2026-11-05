@@ -24,6 +24,7 @@ export const site = {
     contactTitle: "Let's talk.",
     contactText: "If you work on computer architecture, AI hardware, or chip design, or just want to talk, feel free to email me.",
     backToTop: "Back to top ↑",
+    backHome: "← Back to home",
     homeHref: "#top",
     switchHref: "/zh/",
     switchLabel: "中文",

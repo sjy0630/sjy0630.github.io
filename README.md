@@ -24,8 +24,10 @@ npm run dev
 
 **② 放简历 →** 把 PDF 命名为 `cv.pdf` 放进 `public/`，首屏会自动出现 “CV / 简历” 按钮。
 
-**③ 发文章 →** 在 `content/posts/` 里新建 `.md` 文件（开头写 `title`、`date`、`summary`），
-会出现在首页 Notes 区；没有文章时该区块隐藏。（注：文章详情页 `app/writing/[slug]/` 还没做。）
+**③ 发文章 →** 复制 `content/posts/_template.md`，改成英文文件名（如 `gpu-matmul.md`，网址就是 `/writing/gpu-matmul/`），
+改好开头的 `title`、`date`、`summary`，删掉 `draft: true`，用 Markdown 写正文。
+文章会出现在首页 Notes / 笔记 区，导航栏也会出现对应链接；没有文章时这些都自动隐藏。
+图片放 `public/images/`，正文里用 `![说明](/images/xxx.png)` 引用。
 
 **④ 换配色 →** 编辑 `app/globals.css` 顶部 `:root`（浅色）和 dark 媒体查询里的颜色变量
 （`--accent` 是链接颜色）。
@@ -60,6 +62,9 @@ content/site.zh.js       ← 中文内容
 content/posts/*.md       ← 文章
 app/page.js              ← 英文首页 /
 app/zh/page.js           ← 中文首页 /zh/
+app/writing/[slug]/      ← 文章页
+app/not-found.js         ← 404 页面
+app/sitemap.js, robots.js ← 搜索引擎用的站点地图
 app/layout.js            ← 全局外壳（字体、SEO / 分享信息）
 app/globals.css          ← 主题配色
 app/icon.svg             ← 网站图标

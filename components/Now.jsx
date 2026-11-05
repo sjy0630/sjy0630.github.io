@@ -1,8 +1,8 @@
 import Section from "@/components/Section";
 
-export default function Now({ site }) {
+export default function Now({ site, index }) {
   return (
-    <Section id="now" index="02" title={site.ui.sections.now} aside={`${site.ui.updated} ${site.nowUpdated}`}>
+    <Section id="now" index={index} title={site.ui.sections.now} aside={`${site.ui.updated} ${site.nowUpdated}`}>
       <ol className="relative space-y-8 border-l border-line pl-6">
         {site.now.map((item) => (
           <li key={item.title} className="relative">
