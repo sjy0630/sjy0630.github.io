@@ -104,7 +104,7 @@ export const site = {
     {
       title: "Tank Trouble",
       status: "Hardware · Course project",
-      kind: "open",
+      kind: "progress",
       desc: "An FPGA tank game built in Verilog on a Basys3 board for Digital Logic Design (Honors). I designed a modular RTL system integrating PS/2 keyboard input, 640×480 VGA rendering, ROM-based sprites with 32 tank orientations, fixed-point movement and rotation, and configurable maze rendering.",
       tags: ["Verilog", "FPGA", "Vivado", "VGA", "PS/2"],
       link: "",
