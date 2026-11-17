@@ -107,7 +107,7 @@ export const site = {
       kind: "progress",
       desc: "An FPGA tank game built in Verilog on a Basys3 board for Digital Logic Design (Honors). I designed a modular RTL system integrating PS/2 keyboard input, 640×480 VGA rendering, ROM-based sprites with 32 tank orientations, fixed-point movement and rotation, and configurable maze rendering.",
       tags: ["Verilog", "FPGA", "Vivado", "VGA", "PS/2"],
-      link: "",
+      link: "https://github.com/sjy0630/tank-battle",
     },
     {
       title: "Raspberry Pi Smart Car",

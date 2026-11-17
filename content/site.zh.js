@@ -103,7 +103,7 @@ export const siteZh = {
       kind: "progress",
       desc: "数字逻辑基础（荣誉课）课程项目，基于 Basys3 FPGA 用 Verilog 实现坦克游戏。我设计了模块化 RTL 系统，集成 PS/2 键盘输入、640×480 VGA 显示、支持 32 个坦克朝向的精灵 ROM、定点运算运动控制，以及可配置的迷宫渲染。",
       tags: ["Verilog", "FPGA", "Vivado", "VGA", "PS/2"],
-      link: "",
+      link: site.projects[3].link,
     },
     {
       title: "树莓派智能小车",
