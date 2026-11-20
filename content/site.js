@@ -122,6 +122,7 @@ export const site = {
 
   honors: [
     { year: "2026", title: "National Scholarship", detail: "" },
+    { year: "2025–2026", title: "Outstanding Student, Fudan University", detail: "" },
     { year: "2026", title: "Agentic4Systems Summer School GPGPU Design Contest — Third Prize", detail: "Track B: GPGPU RTL design" },
     { year: "2026", title: "Mathematical Contest in Modeling (MCM) — Successful Participant", detail: "" },
     { year: "2025", title: "Chinese Mathematics Competitions — Third Prize", detail: "Shanghai division, non-math majors (Category A)" },

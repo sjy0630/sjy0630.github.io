@@ -118,6 +118,7 @@ export const siteZh = {
 
   honors: [
     { year: "2026", title: "国家奖学金", detail: "" },
+    { year: "2025–2026", title: "优秀学生", detail: "" },
     { year: "2026", title: "Agentic4Systems 暑期学校 GPGPU 设计竞赛三等奖", detail: "赛道 B：GPGPU RTL 设计" },
     { year: "2026", title: "美国大学生数学建模竞赛 S 奖", detail: "" },
     { year: "2025", title: "全国大学生数学竞赛三等奖", detail: "上海赛区 · 非数学专业 A 类" },
